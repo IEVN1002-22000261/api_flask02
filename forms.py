@@ -1,5 +1,5 @@
 from wtforms import Form 
-from wtforms import StringField, Passwordfield, EmailField, BooleandField, SubmitField, IntegerField
+from wtforms import StringField, PasswordField, EmailField, SubmitField, IntegerField
 from wtforms import validators
 
 class UserForm(Form):
