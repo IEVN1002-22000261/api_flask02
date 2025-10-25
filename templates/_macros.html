@@ -5,4 +5,17 @@
     <input type="{{text}}" class="form-control" id="{{name}}" name="{{name}}" placeholder="{{placeholder}}">
 </div>
 
+
+{% macro camposNuevos(field) %}
+<td>{{field.label}}</td>
+<dd>{{field(**Kwargs) | safe}}</dd>
+
+{% if field.errors %}
+<ul>
+    {% for error in field.errors %}
+    <li style="color:red;">{{error}}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
 {% endmacro %}

@@ -1,4 +1,17 @@
-{% extends "layout.html" %}
-{% block container %}
-    <h1>Distancia</h1>
-{% endblock %}
+{% extends "layout.html"%}
+{% import "_macros.html" as datos_macro %}
+    {% block container %}
+ 
+        <h1>Operas Bas</h1>
+ 
+        <form action="" method="post">
+            {{ datos_macro.datos ('x1', 'Ingresa X1') }}
+            {{ datos_macro.datos ('y1', 'Ingresa Y1') }}
+            {{ datos_macro.datos ('x2', 'Ingresa X2') }}
+            {{ datos_macro.datos ('y2', 'Ingresa Y2') }}
+            <br>
+            <button type="submit" class="btn btn-primary"> Calcular </button>
+        </form>
+        <h1>la distancia es de {{res}}</h1>
+   
+    {% endblock %}
